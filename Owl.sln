@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{05447806-83E9-4413-BB87-26D5F5448BE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playground", "Playground", "{5758B0BE-B15E-49D1-8AF4-A431840FE67C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Documents", ".Documents", "{D9C94C78-AAC7-4C9F-A47C-416E50014378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owl", "Core\Owl\Owl.csproj", "{D26F3B96-9A15-4738-B842-34FCEFDE638D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConWordPlayground", "Playground\ConWordPlayground\ConWordPlayground.csproj", "{6A4DF622-5A52-4046-95D4-EE02DDCF05BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConChartPlayground", "Playground\ConChartPlayground\ConChartPlayground.csproj", "{53762F42-2195-40BA-BF9F-CFF1227D9556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConExcelPlayground", "Playground\ConExcelPlayground\ConExcelPlayground.csproj", "{439B7725-8EDE-49BB-98AA-898D3237E89A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConWordChunk", "ConWordChunk\ConWordChunk.csproj", "{EF219B90-D151-444A-B921-40B7F412A257}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D26F3B96-9A15-4738-B842-34FCEFDE638D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26F3B96-9A15-4738-B842-34FCEFDE638D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26F3B96-9A15-4738-B842-34FCEFDE638D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26F3B96-9A15-4738-B842-34FCEFDE638D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4DF622-5A52-4046-95D4-EE02DDCF05BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4DF622-5A52-4046-95D4-EE02DDCF05BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4DF622-5A52-4046-95D4-EE02DDCF05BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4DF622-5A52-4046-95D4-EE02DDCF05BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53762F42-2195-40BA-BF9F-CFF1227D9556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53762F42-2195-40BA-BF9F-CFF1227D9556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53762F42-2195-40BA-BF9F-CFF1227D9556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53762F42-2195-40BA-BF9F-CFF1227D9556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439B7725-8EDE-49BB-98AA-898D3237E89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439B7725-8EDE-49BB-98AA-898D3237E89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439B7725-8EDE-49BB-98AA-898D3237E89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439B7725-8EDE-49BB-98AA-898D3237E89A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF219B90-D151-444A-B921-40B7F412A257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF219B90-D151-444A-B921-40B7F412A257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF219B90-D151-444A-B921-40B7F412A257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF219B90-D151-444A-B921-40B7F412A257}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D26F3B96-9A15-4738-B842-34FCEFDE638D} = {05447806-83E9-4413-BB87-26D5F5448BE6}
+		{6A4DF622-5A52-4046-95D4-EE02DDCF05BD} = {5758B0BE-B15E-49D1-8AF4-A431840FE67C}
+		{53762F42-2195-40BA-BF9F-CFF1227D9556} = {5758B0BE-B15E-49D1-8AF4-A431840FE67C}
+		{439B7725-8EDE-49BB-98AA-898D3237E89A} = {5758B0BE-B15E-49D1-8AF4-A431840FE67C}
+		{EF219B90-D151-444A-B921-40B7F412A257} = {5758B0BE-B15E-49D1-8AF4-A431840FE67C}
+	EndGlobalSection
+EndGlobal
