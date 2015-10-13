@@ -58,7 +58,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Owl\Owl.csproj">
+    <ProjectReference Include="..\..\Core\Owl\Owl.csproj">
       <Project>{d26f3b96-9a15-4738-b842-34fcefde638d}</Project>
       <Name>Owl</Name>
     </ProjectReference>

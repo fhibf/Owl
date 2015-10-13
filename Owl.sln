@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConChartPlayground", "Playg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConExcelPlayground", "Playground\ConExcelPlayground\ConExcelPlayground.csproj", "{439B7725-8EDE-49BB-98AA-898D3237E89A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConWordChunk", "ConWordChunk\ConWordChunk.csproj", "{EF219B90-D151-444A-B921-40B7F412A257}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConWordChunk", "Playground\ConWordChunk\ConWordChunk.csproj", "{EF219B90-D151-444A-B921-40B7F412A257}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
