@@ -78,6 +78,7 @@
     <Compile Include="Excel\DocumentCreator.cs" />
     <Compile Include="Excel\_ExcelBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Word\BookmarkReplacer.cs" />
     <Compile Include="Word\DocumentMerger.cs" />
     <Compile Include="Word\FormatStyle.cs" />
     <Compile Include="Word\DocumentCreator.cs" />

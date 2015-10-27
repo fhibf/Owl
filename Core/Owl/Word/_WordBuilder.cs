@@ -123,6 +123,12 @@ namespace Owl.Word {
             pageBreaker.BreakPage(this._package);
         }
 
+        public void ReplaceBookmark(string bookmark, string content) {
+
+            BookmarkReplacer replacer = new BookmarkReplacer();
+            replacer.ReplaceBookmark(this._package, bookmark, content);
+        }
+
         public void Dispose() {
 
             if (this._package != null) {
