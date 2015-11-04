@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>Owl</id>
+        <id>Owl.OpenXml</id>
         <version>1.0.0</version>
         <title>InstaSharp</title>
         <authors>Fernando Henrique Inocêncio Borba Ferreira</authors>
