@@ -94,6 +94,7 @@
     <Compile Include="Word\_WordBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Owl.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
