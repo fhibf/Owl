@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Owl.OpenXml</id>
+        <version>1.0.0</version>
+        <title>Owl</title>
+        <authors>Fernando Henrique Inocêncio Borba Ferreira</authors>
+        <owners>Fernando Henrique Inocêncio Borba Ferreira,Felipe Fujiy Pessoto</owners>
+        <projectUrl>https://github.com/FerHenrique/Owl</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Owl</description>
+        <summary />
+        <releaseNotes />
+        <copyright>Copyright 2015</copyright>
+        <tags>Owl OpenXml Office Word</tags>
+        <dependencies>
+            <dependency id="DocumentFormat.OpenXml" version="2.5" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\Owl.dll" target="lib\net45\Owl.dll" />
+    </files>
+</package>
