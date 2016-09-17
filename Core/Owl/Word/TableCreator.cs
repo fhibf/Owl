@@ -1,16 +1,17 @@
 ﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System.Data;
 
 namespace Owl.Word {
     internal class TableCreator {
 
-        public void AddTable(WordprocessingDocument package, int rows, int columns) {
+        public void AddTable(WordprocessingDocument package, DataTable table, HorizontalAlignmentType alignment) {
 
             Body body = package.MainDocumentPart.Document.Body;
 
             // Create an empty table.
-            Table table = new Table();
+            Table tbl = new Table();
 
             // Create a TableProperties object and specify its border information.
             TableProperties tblProp = new TableProperties(
@@ -49,14 +50,14 @@ namespace Owl.Word {
             );
 
             // Append the TableProperties object to the empty table.
-            table.AppendChild<TableProperties>(tblProp);
+            tbl.AppendChild<TableProperties>(tblProp);
 
-            for (int r = 0; r < rows; r++) {
+            for (int r = 0; r < table.Rows.Count; r++) {
 
                 // Create a row.
                 TableRow tr = new TableRow();
 
-                for (int c = 0; c < columns; c++) {
+                for (int c = 0; c < table.Columns.Count; c++) {
 
                     // Create a cell.
                     TableCell tc1 = new TableCell();
@@ -66,12 +67,11 @@ namespace Owl.Word {
                     //    new TableCellWidth() { Type = TableWidthUnitValues.Dxa, Width = "2400" }));
 
                     // Specify the table cell content.
-                    tc1.Append(new Paragraph(new Run(new Text("some text"))));
+                    tc1.Append(new Paragraph(new Run(new Text(table.Rows[r][c].ToString()))));
 
                     // Append the table cell to the table row.
                     tr.Append(tc1);
-
-
+                    
                     //// Create a second table cell by copying the OuterXml value of the first table cell.
                     //TableCell tc2 = new TableCell(tc1.OuterXml);
 
@@ -80,10 +80,10 @@ namespace Owl.Word {
                 }
 
                 // Append the table row to the table.
-                table.Append(tr);
+                tbl.Append(tr);
             }
                        
-            body.Append(table);
+            body.Append(tbl);
         }
     }
 }

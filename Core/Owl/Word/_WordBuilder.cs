@@ -1,5 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Data;
 
 namespace Owl.Word {
     public class WordBuilder : IDisposable {
@@ -104,11 +105,16 @@ namespace Owl.Word {
             var titleCreator = new ParagraphCreator();
             titleCreator.CreateTextParagraph(this._package, styleName, alignment, text, formatStyle);
         }
-        
-        public void CreateTable(int rows, int columns) {
+
+        public void CreateTable(DataTable table) {
+
+            CreateTable(table, HorizontalAlignmentType.Left);
+        }
+
+        public void CreateTable(DataTable table, HorizontalAlignmentType alignment) {
 
             TableCreator tableCreator = new TableCreator();
-            tableCreator.AddTable(this._package, rows, columns);
+            tableCreator.AddTable(this._package, table, alignment);
         }
 
         public void MergeDocument(string documentPath) {

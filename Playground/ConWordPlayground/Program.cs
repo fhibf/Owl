@@ -1,4 +1,5 @@
 ﻿using Owl.Word;
+using System.Data;
 using System.Diagnostics;
 using System.IO;
 
@@ -85,11 +86,32 @@ namespace ConWordPlayground {
                 builder.AddImage("Super-IT.png", HorizontalAlignmentType.Center);
                 builder.AddImage("Super-IT.png", HorizontalAlignmentType.Right);
 
-                builder.CreateTable(20, 8);
+                AddTable(builder);
             }
 
             ProcessStartInfo startInfo = new ProcessStartInfo(document);
             Process.Start(startInfo);
+        }
+
+        private static void AddTable(WordBuilder builder) {
+
+            using (var table = new DataTable()) {
+
+                table.Columns.Add("Item", typeof(string));
+                table.Columns.Add("Min", typeof(string));
+                table.Columns.Add("Avg", typeof(string));
+                table.Columns.Add("Max", typeof(string));
+                
+                for (int i = 0; i < 10; i++) {
+
+                    var r = table.NewRow();
+                    r[0] = i.ToString(); r[1] = 10M.ToString(); r[2] = 11M.ToString(); r[3] = 12M.ToString();
+
+                    table.Rows.Add(r);
+                }
+
+                builder.CreateTable(table);
+            }
         }
     }
 }
