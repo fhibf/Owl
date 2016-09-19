@@ -108,13 +108,15 @@ namespace Owl.Word {
 
         public void CreateTable(DataTable table) {
 
-            CreateTable(table, HorizontalAlignmentType.Left);
+            var tStyle = new TableStyle();
+
+            CreateTable(table, tStyle);
         }
 
-        public void CreateTable(DataTable table, HorizontalAlignmentType alignment) {
+        public void CreateTable(DataTable table, TableStyle style) {
 
             TableCreator tableCreator = new TableCreator();
-            tableCreator.AddTable(this._package, table, alignment);
+            tableCreator.AddTable(this._package, table, style);
         }
 
         public void MergeDocument(string documentPath) {

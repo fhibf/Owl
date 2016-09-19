@@ -110,7 +110,11 @@ namespace ConWordPlayground {
                     table.Rows.Add(r);
                 }
 
-                builder.CreateTable(table);
+                builder.CreateTable(table, new TableStyle() {
+                    Alignment = HorizontalAlignmentType.Center,
+                    ShowTitle = true,
+                    Title = "My Table"            
+                });
             }
         }
     }

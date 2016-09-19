@@ -48,7 +48,7 @@ namespace Owl.Word {
 
             SetPackageProperties(document);
         }
-
+        
         // Generates content of extendedFilePropertiesPart1.
         private void GenerateExtendedFilePropertiesPart1Content(ExtendedFilePropertiesPart extendedFilePropertiesPart1) {
             Ap.Properties properties1 = new Ap.Properties();
