@@ -1,4 +1,5 @@
 ﻿using Owl.Charts;
+using Owl.Common;
 using System;
 using System.Data;
 using System.Diagnostics;
@@ -8,9 +9,9 @@ namespace ConChartPlayground {
     class Program {
         static void Main(string[] args) {
 
-            //CreateLineChart();
+            CreateLineChart();
 
-            CreatePieChart();
+            //CreatePieChart();
         }
 
         private static void CreatePieChart() {
@@ -39,9 +40,8 @@ namespace ConChartPlayground {
             chartBuilder.BuildPieChart(image,
                                        data,
                                        new PieChartContext() { Title = "My sample chart!",
-                                                               IsLabelOutside = true,
-                                                               LabelStyle = PieChartLabelStyle.LabelPercent
-                                                              
+                                           IsLabelOutside = true,
+                                           LabelStyle = PieChartLabelStyle.LabelPercent                                           
                                        });
 
             ProcessStartInfo startInfo = new ProcessStartInfo(image);
@@ -80,7 +80,10 @@ namespace ConChartPlayground {
             ChartBuilder chartBuilder = new ChartBuilder();
             chartBuilder.BuildLineChart(image,
                                         data,
-                                        new LineChartContext() { Title = "My sample chart!" });
+                                        new LineChartContext() {
+                                            Title = "My sample chart!",
+                                            ImageSize = new ImageSize() { Width=1390, Height = 464 }
+                                        } );
 
             ProcessStartInfo startInfo = new ProcessStartInfo(image);
             Process.Start(startInfo);

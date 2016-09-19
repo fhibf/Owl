@@ -89,6 +89,7 @@
     <Compile Include="Word\StyleCreator.cs" />
     <Compile Include="Word\ParagraphCreator.cs" />
     <Compile Include="Word\TableCreator.cs" />
+    <Compile Include="Word\TableStyle.cs" />
     <Compile Include="Word\TextParagraphType.cs" />
     <Compile Include="Word\WordHelper.cs" />
     <Compile Include="Word\_WordBuilder.cs" />
