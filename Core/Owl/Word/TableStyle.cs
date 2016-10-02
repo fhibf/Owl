@@ -7,6 +7,12 @@ namespace Owl.Word {
 
         public HorizontalAlignmentType Alignment { get; set; }
 
+        public int RowFontSize { get; set; }
+
+        public int TitleFontSize { get; set; }
+
+        public int HeaderFontSize { get; set; }
+
         public string Title { get; set; }
 
         public bool ShowTitle { get; set; }
@@ -27,11 +33,13 @@ namespace Owl.Word {
             ShowTitle = false;
             EnableAlternativeBackgroundColor = true;
 
+            TitleFontSize = HeaderFontSize = RowFontSize = 9;
+
             Alignment = HorizontalAlignmentType.Left;
 
-            TitleBackgroundColor = Color.FromArgb(105, 105, 105);
-            HeaderBackgroundColor = Color.FromArgb(128, 128, 128);
-            AlternativeBackgroundColor = Color.FromArgb(192, 192, 192);
+            TitleBackgroundColor = Color.FromArgb(128, 128, 128);
+            HeaderBackgroundColor = Color.FromArgb(192, 192, 192);
+            AlternativeBackgroundColor = Color.FromArgb(225, 230, 235);
         }
     }
 }
