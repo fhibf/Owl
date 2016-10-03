@@ -111,7 +111,7 @@ namespace Owl.Word {
                         string[] lines = rowContent.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
                         for (int i = 0; i < lines.Length; i++) {
 
-                            var line = lines[0];
+                            var line = lines[i];
                             if (i > 0) {
                                 run.AppendChild(new Break());
                             }
