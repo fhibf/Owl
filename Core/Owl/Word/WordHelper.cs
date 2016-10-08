@@ -6,6 +6,7 @@ namespace Owl.Word {
     internal class WordHelper {
 
         internal static bool IsStyleIdInDocument(WordprocessingDocument doc, string styleid) {
+
             // Get access to the Styles element for this document.
             Styles s = doc.MainDocumentPart.StyleDefinitionsPart.Styles;
 

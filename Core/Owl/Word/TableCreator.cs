@@ -22,42 +22,13 @@ namespace Owl.Word {
             // Create an empty table.
             Table tbl = new Table();
 
-            // Create a TableProperties object and specify its border information.
-            TableProperties tblProp = new TableProperties(
-                new TableBorders(
-                    new TopBorder() {
-                        Val =
-                            new EnumValue<BorderValues>(BorderValues.Single),
-                        Size = 1
-                    },
-                    new BottomBorder() {
-                        Val =
-                            new EnumValue<BorderValues>(BorderValues.Single),
-                        Size = 1
-                    },
-                    new LeftBorder() {
-                        Val =
-                            new EnumValue<BorderValues>(BorderValues.Single),
-                        Size = 1
-                    },
-                    new RightBorder() {
-                        Val =
-                            new EnumValue<BorderValues>(BorderValues.Single),
-                        Size = 1
-                    },
-                    new InsideHorizontalBorder() {
-                        Val =
-                            new EnumValue<BorderValues>(BorderValues.Single),
-                        Size = 1
-                    },
-                    new InsideVerticalBorder() {
-                        Val =
-                            new EnumValue<BorderValues>(BorderValues.Single),
-                        Size = 1
-                    }
-                )
-            );
+            // Set table width
+            SetTableWidth(tableStyle, tbl);
 
+            // Create a TableProperties object and specify its border information.
+            TableProperties tblProp = CreateTableProperties();
+
+            // Set table alignment
             SetTableAlignment(tableStyle.Alignment, tblProp);
 
             // Append the TableProperties object to the empty table.
@@ -73,7 +44,36 @@ namespace Owl.Word {
 
             AddRows(table, tableStyle, tbl, tblProp);
 
+            // Append the final table to the document body
             body.Append(tbl);
+        }
+
+        private static TableProperties CreateTableProperties() {
+            return new TableProperties(
+                            new TableBorders(
+                                new TopBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 1 },
+                                new BottomBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 1 },
+                                new LeftBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 1 },
+                                new RightBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 1 },
+                                new InsideHorizontalBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 1 },
+                                new InsideVerticalBorder() { Val = new EnumValue<BorderValues>(BorderValues.Single), Size = 1 }
+                            )
+                        );
+        }
+
+        private static void SetTableWidth(TableStyle tableStyle, Table tbl) {
+
+            if (tableStyle.WidthUnit == TableStyle.TableWidthUnit.Percent) {
+
+                double percent = tableStyle.Width / 100D;
+                int wordPercent = (int)(5000 * (percent));
+
+                TableWidth width = new TableWidth() {
+                    Type = TableWidthUnitValues.Pct,
+                    Width = wordPercent.ToString()
+                };
+                tbl.AppendChild<TableWidth>(width);
+            }
         }
 
         private static void AddRows(DataTable table, TableStyle tableStyle, Table wordTable, TableProperties tableProperties) {

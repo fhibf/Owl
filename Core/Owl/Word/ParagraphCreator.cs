@@ -68,8 +68,7 @@ namespace Owl.Word {
             textRun.AppendChild(new Text(text));
 
             // Add a paragraph with a run and some text.
-            Paragraph newParagraph =
-                new Paragraph(textRun);
+            Paragraph newParagraph = new Paragraph(textRun);
             
             // If the paragraph has no ParagraphProperties object, create one.
             WordHelper.CreateParagraphPropertiesIfNonExists(newParagraph);

@@ -5,6 +5,15 @@ namespace Owl.Word {
 
     public class TableStyle {
 
+        public enum TableWidthUnit {
+            Auto,
+            Percent,
+        }
+
+        public TableWidthUnit WidthUnit { get; set; }
+
+        public int Width { get; set; }
+
         public HorizontalAlignmentType Alignment { get; set; }
 
         public int RowFontSize { get; set; }
@@ -36,6 +45,9 @@ namespace Owl.Word {
             TitleFontSize = HeaderFontSize = RowFontSize = 9;
 
             Alignment = HorizontalAlignmentType.Left;
+
+            WidthUnit = TableWidthUnit.Auto;
+            Width = 100;
 
             TitleBackgroundColor = Color.FromArgb(128, 128, 128);
             HeaderBackgroundColor = Color.FromArgb(192, 192, 192);
