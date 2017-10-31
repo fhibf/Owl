@@ -2,19 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Owl.OpenXml</id>
-        <version>1.0.0</version>
-        <title>Owl</title>
+        <version>1.0.1</version>
+        <title>Owl OpenXml</title>
         <authors>Fernando Henrique Inocêncio Borba Ferreira</authors>
         <owners>Fernando Henrique Inocêncio Borba Ferreira,Felipe Fujiy Pessoto</owners>
         <projectUrl>https://github.com/FerHenrique/Owl</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Owl</description>
+        <description>Owl OpenXml</description>
         <summary />
         <releaseNotes />
-        <copyright>Copyright 2015</copyright>
+        <copyright>Copyright 2017</copyright>
         <tags>Owl OpenXml Office Word</tags>
         <dependencies>
-            <dependency id="DocumentFormat.OpenXml" version="2.5" />
+            <dependency id="DocumentFormat.OpenXml" version="2.5.0" />
         </dependencies>
     </metadata>
     <files>
