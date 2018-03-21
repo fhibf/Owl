@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.5</TargetFramework>
+    <RootNamespace>Owl</RootNamespace>
+    <AssemblyName>Owl</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>1.5.0</Version>
+    <Authors>Fernando Henrique Inocêncio Borba Ferreira,Felipe Fujiy Pessoto</Authors>
+    <PackageId>Owl.OpenXml.NetStandard</PackageId>
+    <PackageTags>Owl OpenXml Office Word</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Charts\**" />
+    <EmbeddedResource Remove="Charts\**" />
+    <None Remove="Charts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+    <Compile Remove="Word\ImageCreator.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="packages.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>

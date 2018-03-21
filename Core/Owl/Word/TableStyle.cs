@@ -1,11 +1,10 @@
-﻿
-using System.Drawing;
+﻿using Owl.Drawing;
 
 namespace Owl.Word {
 
     public class TableStyle {
-
-        public enum TableWidthUnit {
+        public enum TableWidthUnit
+        {
             Auto,
             Percent,
         }
@@ -28,6 +27,8 @@ namespace Owl.Word {
 
         public bool ShowHeader { get; set; }
 
+        public TableHeader CustomHeader { get; set; }
+
         public bool EnableAlternativeBackgroundColor { set; get; }
 
         public Color TitleBackgroundColor { get; set; }
@@ -36,7 +37,8 @@ namespace Owl.Word {
 
         public Color AlternativeBackgroundColor { get; set; }
 
-        public TableStyle() {
+        public TableStyle()
+        {
 
             ShowHeader = true;
             ShowTitle = false;

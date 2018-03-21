@@ -1,7 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using Owl.Data;
 using System;
-using System.Data;
 using System.Globalization;
 using System.Linq;
 
@@ -19,7 +19,7 @@ namespace Owl.Excel {
 
             for (int i = 0; i < dataset.Tables.Count; i++) {
 
-                System.Data.DataTable targetTable = dataset.Tables[i];
+                DataTable targetTable = dataset.Tables[i];
 
                 string sheetName = string.IsNullOrEmpty(targetTable.TableName) ? "sheet" + i : targetTable.TableName;
 

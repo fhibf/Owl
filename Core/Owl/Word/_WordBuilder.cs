@@ -1,6 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
+using Owl.Data;
 using System;
-using System.Data;
 
 namespace Owl.Word {
     public class WordBuilder : IDisposable {
@@ -40,29 +40,29 @@ namespace Owl.Word {
             styleCreator.AddCustomStyle(customStyle);
         }
 
-        public void AddImage(string picturePath) {
+        //public void AddImage(string picturePath) {
 
-            var imageCreator = new ImageCreator(this._package);
-            imageCreator.InsertPicture(picturePath, 1.0M, HorizontalAlignmentType.Left);
-        }
+        //    var imageCreator = new ImageCreator(this._package);
+        //    imageCreator.InsertPicture(picturePath, 1.0M, HorizontalAlignmentType.Left);
+        //}
 
-        public void AddImage(string picturePath, HorizontalAlignmentType alignment) {
+        //public void AddImage(string picturePath, HorizontalAlignmentType alignment) {
 
-            var imageCreator = new ImageCreator(this._package);
-            imageCreator.InsertPicture(picturePath, 1.0M, alignment);
-        }
+        //    var imageCreator = new ImageCreator(this._package);
+        //    imageCreator.InsertPicture(picturePath, 1.0M, alignment);
+        //}
         
-        public void AddImage(string picturePath, decimal resizablePercent) {
+        //public void AddImage(string picturePath, decimal resizablePercent) {
 
-            var imageCreator = new ImageCreator(this._package);
-            imageCreator.InsertPicture(picturePath, resizablePercent, HorizontalAlignmentType.Left);
-        }
+        //    var imageCreator = new ImageCreator(this._package);
+        //    imageCreator.InsertPicture(picturePath, resizablePercent, HorizontalAlignmentType.Left);
+        //}
 
-        public void AddImage(string picturePath, decimal resizablePercent, HorizontalAlignmentType alignment) {
+        //public void AddImage(string picturePath, decimal resizablePercent, HorizontalAlignmentType alignment) {
 
-            var imageCreator = new ImageCreator(this._package);
-            imageCreator.InsertPicture(picturePath, resizablePercent, alignment);
-        }
+        //    var imageCreator = new ImageCreator(this._package);
+        //    imageCreator.InsertPicture(picturePath, resizablePercent, alignment);
+        //}
 
         public void CreateTextParagraph(TextParagraphType paragraphType, string text) {
 

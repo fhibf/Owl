@@ -22,14 +22,14 @@ namespace Owl.Word {
         
         public string FontName { get; set; }
 
-        public System.Drawing.Color Color { get; set; }
+        public Drawing.Color Color { get; set; }
 
         public HighlightColors HighlightColor { get; set; }
 
         public FormatStyle() {
 
             this.HighlightColor = FormatStyle.HighlightColors.None;
-            this.Color = System.Drawing.Color.FromArgb(00, 00, 00);            
+            this.Color = Drawing.Color.FromArgb(00, 00, 00);            
             this.FontName = "Arial";
             this.FontSize = 16;
             this.BasedOn = "Normal";
