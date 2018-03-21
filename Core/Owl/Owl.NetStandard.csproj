@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.5</TargetFramework>
     <RootNamespace>Owl</RootNamespace>
     <AssemblyName>Owl</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <Compile Remove="Properties\AssemblyInfo.cs" />
+    <Compile Remove="Word\ImageCreator.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,8 +29,6 @@
 
   <ItemGroup>
     <PackageReference Include="DocumentFormat.OpenXml" Version="2.8.1" />
-    <PackageReference Include="System.Data.Common" Version="4.3.0" />
-    <PackageReference Include="System.Drawing.Common" Version="4.5.0-preview1-26216-02" />
   </ItemGroup>
 
   <ItemGroup>
