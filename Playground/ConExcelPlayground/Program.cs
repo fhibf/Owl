@@ -1,14 +1,14 @@
-﻿using Owl.Excel;
+﻿using Owl.Data;
+using Owl.Excel;
 using System;
-using System.Data;
 using System.Diagnostics;
 using System.IO;
 
 namespace ConExcelPlayground {
     class Program {
         static void Main(string[] args) {
-            
-            string document = "test.xlsx";
+
+            string document = Path.Combine(Path.GetTempPath(), "test.xlsx");
 
             if (File.Exists(document))
                 File.Delete(document);
@@ -63,11 +63,14 @@ namespace ConExcelPlayground {
 
                 int limiar = j * 10;
 
-                data.Rows.Add(baseDate.AddDays(j),
-                              rnd.Next(limiar, limiar + 30),
-                              rnd.Next(limiar, limiar + 30),
-                              rnd.Next(limiar, limiar + 30),
-                              rnd.Next(limiar, limiar + 30));
+                var row = data.NewRow();
+                row[0] = baseDate.AddDays(j);
+                row[1] = rnd.Next(limiar, limiar + 30);
+                row[2] = rnd.Next(limiar, limiar + 30);
+                row[3] = rnd.Next(limiar, limiar + 30);
+                row[4] = rnd.Next(limiar, limiar + 30);
+
+                data.AddRow(row);
             }
 
             return data;
